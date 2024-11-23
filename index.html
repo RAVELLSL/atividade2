@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercícios - Sistemas Operacionais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .answers {
+            margin-top: 10px;
+        }
+
+        .answers label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+            max-height: 80%;
+            background: rgba(255, 255, 255, 1);
+            overflow-y: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+
+        .modal-content h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .modal-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-content ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .close-btn {
+            display: block;
+            text-align: center;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #c82333;
+        }
+
+        .score {
+            font-size: 18px;
+            margin: 10px 0;
+            text-align: center;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Exercícios<br><br>Sistemas Operacionais</h1><br>
+
+        <!-- Question 1 -->
+        <div class="question">
+            <h2>1. Qual é a principal função de um Sistema Operacional?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="A"> A) Gerenciar a comunicação entre diferentes redes de computadores.</label>
+                <label><input type="radio" name="q1" value="B"> B) Controlar e gerenciar o hardware e software do computador, proporcionando uma interface para o usuário.</label>
+                <label><input type="radio" name="q1" value="C"> C) Executar programas de aplicação específicos, como editores de texto e planilhas.</label>
+                <label><input type="radio" name="q1" value="D"> D) Proteger o computador contra vírus e malwares.</label>
+                <label><input type="radio" name="q1" value="E"> E) Realizar backups automáticos dos dados do usuário.</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <h2>2. Qual dos seguintes não é um tipo de Sistema Operacional?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="A"> A) Batch.</label>
+                <label><input type="radio" name="q2" value="B"> B) Multiprogramação.</label>
+                <label><input type="radio" name="q2" value="C"> C) Time-sharing.</label>
+                <label><input type="radio" name="q2" value="D"> D) Distribuído.</label>
+                <label><input type="radio" name="q2" value="E"> E) Compilador.</label>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <h2>3. Em relação ao gerenciamento de memória, o que é paginação?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="A"> A) Técnica que divide a memória física em blocos de tamanho fixo chamados páginas.</label>
+                <label><input type="radio" name="q3" value="B"> B) Processo de alocação de memória contígua para processos.</label>
+                <label><input type="radio" name="q3" value="C"> C) Método de compressão de dados na memória para economizar espaço.</label>
+                <label><input type="radio" name="q3" value="D"> D) Técnica de armazenamento de dados em discos externos.</label>
+                <label><input type="radio" name="q3" value="E"> E) Processo de priorização de processos na CPU.</label>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <h2>4. Qual é a função do gerenciador de dispositivos em um Sistema Operacional?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="A"> A) Controlar a execução de processos na CPU.</label>
+                <label><input type="radio" name="q4" value="B"> B) Gerenciar a comunicação entre o sistema e os dispositivos de hardware, como impressoras e discos rígidos.</label>
+                <label><input type="radio" name="q4" value="C"> C) Alocar espaço de memória para processos em execução.</label>
+                <label><input type="radio" name="q4" value="D"> D) Proteger o sistema contra acessos não autorizados.</label>
+                <label><input type="radio" name="q4" value="E"> E) Fornecer uma interface gráfica para o usuário.</label>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <h2>5. O que caracteriza um Sistema Operacional de tempo real?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="A"> A) Capacidade de executar múltiplos programas simultaneamente.</label>
+                <label><input type="radio" name="q5" value="B"> B) Garantia de que tarefas críticas sejam completadas dentro de um tempo restrito.</label>
+                <label><input type="radio" name="q5" value="C"> C) Operação em ambientes distribuídos com múltiplos computadores.</label>
+                <label><input type="radio" name="q5" value="D"> D) Execução de tarefas em lote sem interação do usuário.</label>
+                <label><input type="radio" name="q5" value="E"> E) Fornecimento de uma interface gráfica avançada para o usuário.</label>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <h2>6. Qual dos seguintes é um exemplo de Sistema Operacional de código aberto?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q6" value="A"> A) Windows.</label>
+                <label><input type="radio" name="q6" value="B"> B) MacOS.</label>
+                <label><input type="radio" name="q6" value="C"> C) Linux.</label>
+                <label><input type="radio" name="q6" value="D"> D) iOS.</label>
+                <label><input type="radio" name="q6" value="E"> E) Android.</label>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <h2>7. O que é o núcleo (kernel) de um Sistema Operacional?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q7" value="A"> A) A interface gráfica que o usuário interage.</label>
+                <label><input type="radio" name="q7" value="B"> B) O conjunto de aplicativos padrão fornecidos com o sistema.</label>
+                <label><input type="radio" name="q7" value="C"> C) A parte central do SO que gerencia os recursos do sistema e permite a interação entre hardware e software.</label>
+                <label><input type="radio" name="q7" value="D"> D) O sistema de arquivos utilizado para organizar e armazenar dados.</label>
+                <label><input type="radio" name="q7" value="E"> E) O programa responsável pela inicialização do computador.</label>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <h2>8. Qual é a diferença entre memória volátil e não volátil?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q8" value="A"> A) Memória volátil mantém os dados mesmo sem energia; memória não volátil perde os dados sem energia.</label>
+                <label><input type="radio" name="q8" value="B"> B) Memória volátil é usada para armazenamento permanente; memória não volátil para armazenamento temporário.</label>
+                <label><input type="radio" name="q8" value="C"> C) Memória volátil perde os dados quando não há energia; memória não volátil mantém os dados sem energia.</label>
+                <label><input type="radio" name="q8" value="D"> D) Memória volátil é mais lenta que a não volátil.</label>
+                <label><input type="radio" name="q8" value="E"> E) Não há diferença entre memória volátil e não volátil.</label>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <h2>9. Qual é a função do sistema de arquivos em um Sistema Operacional?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q9" value="A"> A) Gerenciar a execução de processos.</label>
+                <label><input type="radio" name="q9" value="B"> B) Controlar a comunicação entre dispositivos de hardware.</label>
+                <label><input type="radio" name="q9" value="C"> C) Organizar e armazenar arquivos no dispositivo de armazenamento.</label>
+                <label><input type="radio" name="q9" value="D"> D) Proteger o sistema contra vírus.</label>
+                <label><input type="radio" name="q9" value="E"> E) Fornecer uma interface gráfica para o usuário.</label>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <h2>10. Qual dos seguintes é um exemplo de dispositivo de entrada?</h2>
+            <div class="answers">
+                <label><input type="radio" name="q10" value="A"> A) Monitor.</label>
+                <label><input type="radio" name="q10" value="B"> B) Impressora.</label>
+                <label><input type="radio" name="q10" value="C"> C) Teclado.</label>
+                <label><input type="radio" name="q10" value="D"> D) Alto-falante.</label>
+                <label><input type="radio" name="q10" value="E"> E) Projetor.</label>
+            </div>
+        </div>
+
+        <button onclick="calculateScore()">Responder</button>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Gabarito e Explicações</h2>
+            <div class="score" id="score"></div>
+            <ul id="answers-list">
+                <!-- Gabarito será preenchido dinamicamente -->
+            </ul>
+            <button class="close-btn" onclick="closeModal()">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        const correctAnswers = {
+            q1: "B",
+            q2: "E",
+            q3: "A",
+            q4: "B",
+            q5: "B",
+            q6: "C",
+            q7: "C",
+            q8: "C",
+            q9: "C",
+            q10: "C"
+        };
+
+        const explanations = {
+            q1: "A principal função de um SO é gerenciar hardware e software do computador.",
+            q2: "Compilador não é um tipo de SO.",
+            q3: "A paginação divide memória física em blocos chamados páginas.",
+            q4: "Gerenciador de dispositivos cuida da comunicação entre hardware e software.",
+            q5: "Sistemas em tempo real garantem execução em tempos restritos.",
+            q6: "Linux é um exemplo de SO de código aberto.",
+            q7: "O kernel é a parte central que gerencia hardware e software.",
+            q8: "Memória volátil perde dados sem energia, memória não volátil mantém.",
+            q9: "Sistema de arquivos organiza e armazena dados no disco.",
+            q10: "Teclado é um dispositivo de entrada."
+        };
+
+        function calculateScore() {
+            let score = 0;
+            const totalQuestions = Object.keys(correctAnswers).length;
+            const answersList = document.getElementById("answers-list");
+            answersList.innerHTML = "";
+
+            for (let key in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${key}"]:checked`);
+                if (userAnswer) {
+                    const isCorrect = userAnswer.value === correctAnswers[key];
+                    if (isCorrect) {
+                        score++;
+                    }
+                    answersList.innerHTML += `
+                        <li>
+                            <strong>${key.toUpperCase().replace("Q", "")}. Resposta Correta: ${correctAnswers[key]}</strong> 
+                            - ${explanations[key]}
+                            ${isCorrect ? "✅" : "❌"}
+                        </li>`;
+                } else {
+                    answersList.innerHTML += `
+                        <li>
+                            <strong>${key.toUpperCase().replace("Q", "")}. Resposta Correta: ${correctAnswers[key]}</strong> 
+                            - ${explanations[key]}
+                            ❌ (Não respondida)
+                        </li>`;
+                }
+            }
+
+            document.getElementById("score").innerText = `Você acertou ${score} de ${totalQuestions} questões.`;
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
